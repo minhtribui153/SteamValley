@@ -1,0 +1,33 @@
+{
+    "name": "Tò Mò",
+    "dialogues": [
+    [
+      {
+        "Subject": "Táy Máy",
+        "Line": "Bạn có sao không vậy?"
+      },
+      {
+        "Subject": "Tò Mò",
+        "Line": "Mình không sao hết gì cả!"
+      },
+      {
+        "Subject": "Tò Mò",
+        "Line": "Nhưng mà chỗ này có nhiều ma quá, mình không có thể trống lại được."
+      },
+      {
+        "Subject": "Táy Máy",
+        "Line": "Đễ mình giúp bạn."
+      },
+      {
+        "Subject": "Tò Mò",
+        "Line": "Okê, cảm ơn bạn nhiều lắm!"
+      }
+    ],
+    [
+      {
+        "Subject": "Tò Mò",
+        "Line": "Bạn đã giết hết ma xong chưa?"
+      }
+    ]
+  ]
+}
