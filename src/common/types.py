@@ -55,7 +55,7 @@ class EntityType(enum.Enum):
 
 
 OBSTACLES_TYPES = (EntityType.GROUND_A, EntityType.GROUND_B)
-FRIENDLY_NPC_TYPES = (EntityType.NPC_CO_NGA, EntityType.NPC_CHU_NAM, EntityType.NPC_CHU_NHAN)
+FRIENDLY_NPC_TYPES = (EntityType.NPC_CO_NGA, EntityType.NPC_CHU_NAM, EntityType.NPC_CHU_NHAN, EntityType.NPC_TO_MO)
 TRAMPOLINE_PART_TYPES = (EntityType.TRAMPOLINE_PART_SPRING, EntityType.TRAMPOLINE_PART_FRAME)
 
 COLLECTABLE_TYPES = (
@@ -69,3 +69,4 @@ FIXED_POSITION_TYPES = (EntityType.DIALOGUE_BOX, EntityType.PLAYER_HP, EntityTyp
 
 class QuestName(enum.Enum):
     TRAMPOLINE = enum.auto()
+    SHADOWS = enum.auto()

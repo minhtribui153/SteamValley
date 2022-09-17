@@ -7,7 +7,7 @@ import pygame
 from common import util
 from common.event import EventType, GameEvent
 from common.types import ActionType, EntityType
-from common.util import now
+from common.util import now, rect_distance
 from config import GameConfig, PlayerConfig, TrampolineConfig
 from entities.animated_entity import AnimatedEntity
 from entities.friendly_npc import FriendlyNpc
@@ -138,7 +138,9 @@ class Player(AnimatedEntity):
     def _update_npc_near_by(self):
         self.npc_near_by = None
         for npc in self.world.get_friendly_npcs():
-            if self.collide(npc):
+            direction_type, distance =  rect_distance(self.rect, npc.rect)
+            if distance < 30 and not "top" in direction_type and not "bottom" in direction_type and not self.collide(npc):
+            # if self.collide(npc):
                 # Get a hold of the NPC, and post an event for that NPC to handle
                 self.npc_near_by = npc
                 GameEvent(EventType.PLAYER_NEAR_NPC, listener_id=npc.id).post()
@@ -184,7 +186,7 @@ class Player(AnimatedEntity):
                 self._take_damage(bullet.damage)
 
         for shadow in self.world.get_entities(EntityType.SHADOW):
-            if self.collide(shadow):
+            if self.collide(shadow) and not shadow.already_interact_player:
                 self._take_damage(shadow.damage)
 
     def _take_damage(self, damage: int):

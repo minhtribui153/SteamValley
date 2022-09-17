@@ -20,6 +20,7 @@ class Shadow(AnimatedEntity):
     def __init__(self, damage, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.damage = damage
+        self.already_interact_player = False
 
         # Shadow may move in a random direction at the start.
         self.move_random()
@@ -38,6 +39,7 @@ class Shadow(AnimatedEntity):
 
     def die(self):
         super().die()
+        self.already_interact_player = True
         self.set_remaining_ttl_ms(self.animation_interval_ms * 6)
 
     def _handle_get_hit(self):
@@ -46,5 +48,4 @@ class Shadow(AnimatedEntity):
                 self.start_hurt(0)  # For Sound effects - skip hurt state
                 self.die()
 
-        if self.collide(self.world.player):
-            self.die()
+        if self.collide(self.world.player) and not self.world.player.moving_left and not self.world.player.moving_right: self.die()

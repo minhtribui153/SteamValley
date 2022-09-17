@@ -12,21 +12,23 @@
       },
       {
         "Subject": "Tò Mò",
-        "Line": "Nhưng mà chỗ này có nhiều ma quá, mình không có thể trống lại được."
+        "Line": "Nhưng mà chỗ này có nhiều bóng đen nhỏ quá,\nmình không có thể xua tan được."
+      },
+      {
+        "Subject": "Tò Mò",
+        "Line": "À, bạn có phải là học sinh mới Cô Nga nói không vậy?"
       },
       {
         "Subject": "Táy Máy",
-        "Line": "Đễ mình giúp bạn."
+        "Line": "Đúng rồi!"
       },
       {
         "Subject": "Tò Mò",
-        "Line": "Okê, cảm ơn bạn nhiều lắm!"
-      }
-    ],
-    [
+        "Line": "May quá, mình đã xua tan một vài bống đen rồi,\nbạn có thể giúp mình xua tan còn lại được không?"
+      },
       {
-        "Subject": "Tò Mò",
-        "Line": "Bạn đã giết hết ma xong chưa?"
+        "Subject": "Táy Máy",
+        "Line": "Okê được! Đẻ mình giúp cho!"
       }
     ]
   ]
